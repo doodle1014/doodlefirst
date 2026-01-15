@@ -7,7 +7,7 @@
 :root {
 	--accent: #e8c447;
 	--accent-dark: #000d8a;
-	--black: #4a638d;
+	--black: #0f172a;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
 	--gray-dark: #ffffff;
@@ -35,7 +35,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
-	background: #4a638d !important;
+	background: #0f172a !important;
 	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
