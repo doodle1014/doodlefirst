@@ -1,0 +1,15 @@
+---
+import BlogPost from '../layouts/BlogPost.astro';
+---
+
+<BlogPost title="404: 길을 잃으셨나요?" description="페이지를 찾을 수 없습니다." pubDate={new Date()}>
+	<div style="text-align: center; padding: 50px;">
+		<h1>404: 길을 잃으셨나요?</h1>
+		<p>찾으시는 페이지가 존재하지 않습니다.</p>
+		
+		<img src="/404-image.png" alt="404 에러 이미지" style="max-width: 100%; height: auto; border-radius: 10px;" />
+		
+		<br /><br />
+		<a href="/" style="color: var(--accent); text-decoration: underline; font-size: 1.2rem;">🏠 홈으로 돌아가기</a>
+	</div>
+</BlogPost>
