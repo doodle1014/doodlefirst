@@ -107,8 +107,10 @@ img {
 }
 code {
 	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
+	background-color: rgba(0, 0, 0, 0.3) !important;
+	border-radius: 4px;
+	color: #ffdd67 !important;
+	font-family: monospace;
 }
 pre {
 	padding: 1.5em;
