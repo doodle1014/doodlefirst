@@ -1,15 +1,54 @@
 ---
-import BlogPost from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<BlogPost title="404: 길을 잃으셨나요?" description="페이지를 찾을 수 없습니다." pubDate={new Date()}>
-	<div style="text-align: center; padding: 50px;">
-		<h1>404: 길을 잃으셨나요?</h1>
-		<p>찾으시는 페이지가 존재하지 않습니다.</p>
-		
-		<img src="/404-image.png" alt="404 에러 이미지" style="max-width: 100%; height: auto; border-radius: 10px;" />
-		
-		<br /><br />
-		<a href="/" style="color: var(--accent); text-decoration: underline; font-size: 1.2rem;">🏠 홈으로 돌아가기</a>
-	</div>
-</BlogPost>
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={`404: Not Found - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: calc(100% - 2em);
+				max-width: 100%;
+				margin: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				padding: 4em 1em;
+			}
+			h1 { font-size: 3rem; margin-bottom: 0.5em; }
+			p { font-size: 1.2rem; color: #cbd5e1; }
+			img { border-radius: 20px; margin: 2em 0; max-width: 100%; height: auto; }
+			.home-link {
+				color: #ffdd67;
+				text-decoration: none;
+				font-weight: bold;
+				border: 2px solid #ffdd67;
+				padding: 0.5em 1.5em;
+				border-radius: 10px;
+				transition: all 0.2s;
+			}
+			.home-link:hover {
+				background: #ffdd67;
+				color: #1e293b;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<p>404:not found</p>
+			
+			<img src="/404-image.png" alt="404 에러 이미지" width="500" />
+			
+			<br />
+			<a href="/" class="home-link">홈으로 돌아가기</a>
+		</main>
+		<Footer />
+	</body>
+</html>
