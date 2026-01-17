@@ -28,52 +28,66 @@ import { SITE_TITLE } from '../consts';
 </header>
 
 <style>
+/* Header.astro 스타일 */
 header {
-	margin: 0;
-	padding: 0 1rem;
-	background: white;
+    margin: 0;
+    padding: 0 1rem;
+    background: white;
 }
 
 nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 👇 PC 버전 기본 높이를 80px 정도로 넉넉하게 고정 */
+    height: 80px; 
 }
 
 h2 {
-	margin: 0;
-	font-size: 1.5rem;
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 h2 a {
-	text-decoration: none;
-	color: inherit;
+    text-decoration: none;
+    color: #000000 !important; /* 글자 검은색 고정 */
 }
 
 .social-links {
-	display: flex;
-	gap: 1em;
-	flex-shrink: 0; /* 아이콘 찌그러짐 방지 */
+    display: flex;
+    gap: 1em;
+    flex-shrink: 0;
+}
+
+.social-links a {
+    color: #000000 !important; /* 아이콘 검은색 고정 */
+    display: flex;
+    align-items: center;
+}
+
+.social-links svg {
+    fill: currentColor;
 }
 
 /* 📱 모바일 전용 설정 (600px 이하) */
 @media (max-width: 600px) {
-	nav {
-		height: 70px; /* 모바일에서 높이 명시적 확보 */
-		flex-wrap: nowrap; /* 한 줄 고정 */
-	}
+    nav {
+        /* 👇 모바일은 PC보다 조금 낮은 60px 정도로 설정 */
+        height: 60px; 
+        flex-wrap: nowrap;
+    }
 
-	h2 {
-		font-size: 1.1rem; /* 제목 크기 축소 */
-	}
+    h2 a {
+        font-size: 1.1rem;
+    }
 
-	.social-links {
-		gap: 0.7em; /* 간격 축소 */
-	}
+    .social-links {
+        gap: 0.7em;
+    }
 
-	.social-links svg {
-		width: 20px; /* 아이콘 크기 축소 */
-		height: 20px;
-	}
+    .social-links svg {
+        width: 24px;
+        height: 24px;
+    }
 }
 </style>
