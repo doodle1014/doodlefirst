@@ -14,21 +14,26 @@ const today = new Date();
 
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
+		padding: 2em 1em 3em 1em; /* 👈 하단 여백을 3em으로 조절 */
 		background: #ffffff;
 		color: #000000;
 		text-align: center;
+		font-family: Arial, sans-serif; /* 👈 안전하게 Arial 적용 */
 	}
-	footer {
-		margin-top: 1em;
+
+	/* footer 안의 p 태그에 모든 굵기 정보를 몰아넣습니다 */
+	footer p {
+		margin: 3px 0; /* 👈 줄 사이 간격을 3px로 고정 */
 		font-size: 1.2em;
-		font-weight: 600;
+		font-weight: bold; /* 👈 원하시는 대로 확실하게 굵은 Arial(700) 적용 */
 	}
+
 	footer a {
-    text-decoration: none;
-    color: #000000;
+		text-decoration: none;
+		color: #000000;
 	}
+
 	footer a:hover {
-    text-decoration: underline;
+		text-decoration: underline;
 	}
 </style>
